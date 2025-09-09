@@ -49,8 +49,8 @@ const UserLayout: React.FC = () => {
                 </NavigationMenuItem>
               </div>
 
-              {/* Center section - Navigation links (hidden on small screens) */}
-              <div className="flex items-center gap-6">
+              {/* {/* Center section - Navigation links (hidden on small screens) */}
+              {/* <div className="hidden md:flex items-center gap-6">
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
@@ -83,7 +83,7 @@ const UserLayout: React.FC = () => {
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
-              </div>
+              </div>  */}
 
               {/* Right section - Action items */}
               <div className="flex items-center gap-2 sm:gap-4">

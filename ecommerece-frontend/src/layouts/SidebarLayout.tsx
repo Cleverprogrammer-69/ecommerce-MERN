@@ -47,42 +47,6 @@ const SidebarLayout: React.FC = () => {
                   </NavigationMenuItem>
                 </div>
 
-                {/* Center section - Navigation links (hidden on small screens) */}
-                <div className="hidden md:flex items-center gap-6">
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        to="/products"
-                        className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                      >
-                        Products
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        to="/about"
-                        className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                      >
-                        About
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-
-                  <NavigationMenuItem>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        to="/contact"
-                        className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                      >
-                        Contact
-                      </Link>
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                </div>
-
                 {/* Right section - Action items */}
                 <div className="flex items-center gap-2 sm:gap-4">
                   <NavigationMenuItem>

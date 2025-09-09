@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Loader from "./components/custom/Loader";
 import SidebarLayout from "./layouts/SidebarLayout";
-import { NavigationHeader } from "./components/custom/Header";
 import UserLayout from "./layouts/UserLayout";
 const Home = lazy(() => import("./pages/Home"));
 const Cart = lazy(() => import("./pages/Cart"));
