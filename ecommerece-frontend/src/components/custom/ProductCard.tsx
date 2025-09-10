@@ -47,7 +47,7 @@ const ProductCard = ({
           <img
             src={photo}
             alt={name}
-            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-300"
             // onError={(e) => {
             //   // Fallback to placeholder if image fails to load
             //   e.currentTarget.src = `/placeholder.svg?height=192&width=300&query=${encodeURIComponent(product.name)}`
@@ -62,8 +62,8 @@ const ProductCard = ({
         </div>
       </CardHeader>
 
-      <CardContent className="p-4">
-        <div className="mb-2">
+      <CardContent className="py-1 px-4">
+        <div className="mb-1">
           <Badge variant="secondary" className="text-xs">
             {category}
           </Badge>
@@ -72,7 +72,7 @@ const ProductCard = ({
           {name}
         </h3>
 
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-2">
           <div className="flex items-center gap-1">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <span className="text-sm font-medium">{rating}</span>
@@ -92,9 +92,9 @@ const ProductCard = ({
         </div>
       </CardContent>
 
-      <CardFooter className="p-4 pt-0">
+      <CardFooter className="p-2 pt-0">
         <Button
-          className="w-full group-hover:bg-primary/90 transition-colors"
+          className="w-full group-hover:bg-primary/90 transition-colors cursor-pointer"
           onClick={() => handler()}
         >
           <ShoppingCart className="mr-2 h-4 w-4" />
