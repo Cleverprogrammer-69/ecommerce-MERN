@@ -75,7 +75,7 @@ const Cart = () => {
 
   const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const discount = appliedPromo === "SAVE10" ? subtotal * 0.1 : 0
-  const tax = (subtotal - discount) * 0.08
+  const tax = (subtotal - discount) * 0.18
   const shipping = subtotal > 50 ? 0 : 9.99
   const total = subtotal - discount + tax + shipping
 
