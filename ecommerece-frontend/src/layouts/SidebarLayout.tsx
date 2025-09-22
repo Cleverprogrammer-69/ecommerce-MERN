@@ -14,6 +14,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu"
+import { Toaster } from "@/components/ui/sonner"
 import { FaSearch, FaShoppingBag, FaSignInAlt } from "react-icons/fa"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "../components/ui/sidebar"
@@ -109,6 +110,7 @@ const SidebarLayout: React.FC = () => {
 
         <main className="flex-1 p-4">
           <Outlet />
+          <Toaster />
         </main>
       </SidebarInset>
     </SidebarProvider>

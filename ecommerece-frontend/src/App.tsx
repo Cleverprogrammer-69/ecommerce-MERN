@@ -6,6 +6,8 @@ import UserLayout from "./layouts/UserLayout";
 const Home = lazy(() => import("./pages/Home"));
 const Cart = lazy(() => import("./pages/Cart"));
 const Search = lazy(() => import("./pages/Search"));
+const Shipping = lazy(() => import("./pages/Shipping"));
+const Login = lazy(() => import("./pages/Login"));
 // Admin routes imports
 const Dashboard = lazy(() => import("./pages/admin/dashboard"));
 const Products = lazy(() => import("./pages/admin/products"));
@@ -33,7 +35,16 @@ function App() {
             <Route path="/search" element={<Search />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/" element={<Home />} />
+
+            {/* Not Logged in routes */}
+            <Route path="/login" element={<Login />} />
+
+            {/* Logged in routes */}
+            <Route>
+              <Route path="/shipping" element={<Shipping />} />
+            </Route>
           </Route>
+          
           // Admin routes
           <Route
           // element={

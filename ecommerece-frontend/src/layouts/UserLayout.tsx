@@ -14,6 +14,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
+import { Toaster } from "@/components/ui/sonner"
 import { FaSearch, FaShoppingBag, FaSignInAlt } from "react-icons/fa";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -49,41 +50,6 @@ const UserLayout: React.FC = () => {
                 </NavigationMenuItem>
               </div>
 
-              {/* {/* Center section - Navigation links (hidden on small screens) */}
-              {/* <div className="hidden md:flex items-center gap-6">
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to="/products"
-                      className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                    >
-                      Products
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to="/about"
-                      className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                    >
-                      About
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link
-                      to="/contact"
-                      className="flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                    >
-                      Contact
-                    </Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-              </div>  */}
 
               {/* Right section - Action items */}
               <div className="flex items-center gap-2 sm:gap-4">
@@ -146,6 +112,7 @@ const UserLayout: React.FC = () => {
       </header>
       <main className="flex-1 p-0">
         <Outlet />
+        <Toaster />
       </main>
     </div>
   );

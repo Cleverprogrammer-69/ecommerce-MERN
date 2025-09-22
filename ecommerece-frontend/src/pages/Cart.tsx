@@ -127,7 +127,7 @@ const Cart = () => {
                   </Avatar>
 
                   <div className="flex-1 space-y-2">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                    <div className="flex flex-row items-start justify-between gap-2">
                       <div>
                         <h3 className="font-semibold text-base">{item.name}</h3>
                         <Badge variant="secondary" className="text-xs">
@@ -141,11 +141,12 @@ const Cart = () => {
                       </div>
                       <Button
                         variant="ghost"
-                        size="sm"
+                        size="lg"
                         onClick={() => removeItem(item.id)}
                         className="text-destructive hover:text-destructive"
                       >
-                        <Trash2 className="h-4 w-4" />
+                        <Separator orientation="vertical" className="md:hidden mx-2 h-7" />
+                        <Trash2 className="h-8 w-8" />
                       </Button>
                     </div>
 
