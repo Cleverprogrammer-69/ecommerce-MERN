@@ -2,62 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Star, ShoppingCart, Eye } from "lucide-react";
 import ProductCard from "@/components/custom/ProductCard";
-// import
+import { products } from "@/lib/products";
 // Sample product data
-const products = [
-  {
-    id: 1,
-    name: "Professional Camera",
-    price: 899.99,
-    originalPrice: 1199.99,
-    image: "/images/camera.jpg",
-    rating: 4.8,
-    reviews: 124,
-    category: "Electronics",
-    isNew: true,
-    discount: 25,
-    stock: 10,
-  },
-  {
-    id: 2,
-    name: "Wireless Headphones",
-    price: 199.99,
-    originalPrice: 249.99,
-    image: "../assets/images/camera-cover.jpg",
-    rating: 4.6,
-    reviews: 89,
-    category: "Audio",
-    isNew: false,
-    discount: 20,
-    stock: 15,
-  },
-  {
-    id: 3,
-    name: "Smart Watch",
-    price: 299.99,
-    originalPrice: 399.99,
-    image: "/assets/images/camera-cover.jpg",
-    rating: 4.7,
-    reviews: 156,
-    category: "Wearables",
-    isNew: true,
-    discount: 25,
-    stock: 5,
-  },
-  {
-    id: 4,
-    name: "Laptop Stand",
-    price: 49.99,
-    originalPrice: 69.99,
-    image: "/assets/images/camera-cover.jpg",
-    rating: 4.5,
-    reviews: 67,
-    category: "Accessories",
-    isNew: false,
-    discount: 29,
-    stock: 20,
-  },
-];
+
 
 const Home = () => {
   const addToCartHandler = () => {
@@ -121,21 +68,7 @@ const Home = () => {
           {/* Product Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                productId={product.id}
-                name={product.name}
-                price={product.price}
-                photo={product.image}
-                rating={product.rating}
-                reviews={product.reviews}
-                category={product.category}
-                isNew={product.isNew}
-                discount={product.discount}
-                originalPrice={product.originalPrice}
-                stock={product.stock} // fallback if not defined
-                handler={addToCartHandler}
-              />
+              <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </div>

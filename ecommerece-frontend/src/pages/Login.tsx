@@ -28,7 +28,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
@@ -53,8 +52,8 @@ const Login = () => {
           <div className="flex flex-col gap-6">
             <div className="grid gap-2">
               <Select
-                onValueChange={(value) => setGender(value)}
-                defaultValue=""
+                onValueChange={(value) => setGender(value) }
+                defaultValue={gender}
               >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a gender" />
@@ -71,18 +70,7 @@ const Login = () => {
                 </SelectContent>
               </Select>
             </div>
-            {/* <div className="grid gap-2">
-              <div className="flex items-center">
-                <Label htmlFor="password">Password</Label>
-                <a
-                  href="#"
-                  className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                >
-                  Forgot your password?
-                </a>
-              </div>
-              <Input id="password" type="password" required />
-            </div> */}
+            
             <div className="flex flex-col gap-3">
               <Label htmlFor="date" className="px-1">
                 Date of birth
