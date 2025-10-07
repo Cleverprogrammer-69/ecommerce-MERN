@@ -157,10 +157,8 @@ export function NavigationHeader() {
                         <DropdownMenuContent align="end">
                           <DropdownMenuLabel>My Account</DropdownMenuLabel>
                           <DropdownMenuSeparator />
-                          <DropdownMenuItem>Profile</DropdownMenuItem>
+                          <DropdownMenuItem><Link to={"/orders"}>Orders</Link></DropdownMenuItem>
                           <DropdownMenuItem>Billing</DropdownMenuItem>
-                          <DropdownMenuItem>Team</DropdownMenuItem>
-                          <DropdownMenuItem>Subscription</DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
                     ) : (

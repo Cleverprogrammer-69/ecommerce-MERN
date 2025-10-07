@@ -89,9 +89,9 @@ const UserLayout: React.FC = () => {
                         <DropdownMenuSeparator />
                         {user.role === "admin" && (<DropdownMenuItem><Link to={"/admin/dashboard"}>Admin Dashboard</Link></DropdownMenuItem>)}
                         <DropdownMenuItem>Profile</DropdownMenuItem>
-                        <DropdownMenuItem>Billing</DropdownMenuItem>
+                        <DropdownMenuItem><Link to={"/orders"}>Orders</Link></DropdownMenuItem>
                         <DropdownMenuItem>Team</DropdownMenuItem>
-                        <DropdownMenuItem>Subscription</DropdownMenuItem>
+                        <DropdownMenuItem>Signout</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   ) : (
